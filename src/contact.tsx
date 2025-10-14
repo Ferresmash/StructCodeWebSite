@@ -1,25 +1,22 @@
 
 
    
-   export function Contact() {
+export function Contact() {
 
-    
-   
-     return (
+    return (
         <div className={"flex flex-col items-center justify-center gap-4 size-full bg-neutral-950"}>
-        <div className={"flex flex-col items-center bg-black/30 p-5 rounded-xl"}>
-            <label className="font-bold text-5xl pb-2">Kontakt</label>
-            <input type="text" placeholder="Namn" className="p-2 rounded-md mb-2 text-white"/>
-            <label className="font-bold text-3xl text-center max-w-[600px]">Fyll i dina kontaktuppgifter så hör vi av oss!</label>
-            <input type="text" placeholder="Namn" className="p-2 rounded-md mb-2 text-white"/>
-
+            <div className={"w-[400px] flex flex-col gap-4 items-end bg-black/30 p-4 rounded-xl"}>
+                <p className="w-full text-center text-lg">Kontakta oss</p>
+                <input type="text" placeholder="Namn" className="w-full p-2 rounded-md text-white bg-neutral-900 focus:outline-1 focus:outline-neutral-700"/>
+                <input type="text" placeholder="Email" className="w-full p-2 rounded-md text-white bg-neutral-900 focus:outline-1 focus:outline-neutral-700"/>
+                <textarea placeholder="Meddelande" className="w-full p-2 rounded-md mb-2 text-white bg-neutral-900 focus:outline-1 focus:outline-neutral-700"/>
+                <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Skicka</button>
+            </div>
         </div>
-      </div>
-   
-     )
-   }
+    )
+}
 
-   export default Contact;
+export default Contact;
 
    
    
