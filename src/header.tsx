@@ -11,15 +11,22 @@ export function Header() {
         return () => window.removeEventListener("scroll", onScroll);
     }, []);
 
+    function scrollToSection(id: string) {
+        const section = document.getElementById(id);    
+        if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+        }
+    }
+
     return (
         <header className={`w-full px-4 py-2 flex justify-center fixed top-0 z-10 transition-colors duration-300
         ${scrolled ? "bg-black/50 backdrop-blur-md shadow-md" : "bg-transparent" }`}>
             <div className={"max-w-[800px] w-full flex flex-row justify-between items-center"}>
                 <p className="text-3xl font-bold">STRUKTURɅ</p>
                 <nav className={"p-2"}>   
-                    <a href="#home" class="text-white hover:underline mx-2 ">Home</a>
-                    <a href="#about" className="text-white hover:underline mx-2">About</a>
-                    <a href="#contact" className="text-white hover:underline mx-2">Contact</a>
+                    <button onClick={() => scrollToSection("home")} class="text-white hover:underline mx-2 cursor-pointer">Home</button>
+                    <button onClick={() => scrollToSection("about")} className="text-white hover:underline mx-2 cursor-pointer">About</button>
+                    <button onClick={() => scrollToSection("contact")} className="text-white hover:underline mx-2 cursor-pointer">Contact</button>
                 </nav>
             </div>
             

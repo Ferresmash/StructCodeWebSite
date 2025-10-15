@@ -9,7 +9,7 @@ import williamicon from './assets/William.jpg';
     
    
      return (
-        <div className={"flex flex-col items-center justify-center gap-4 bg-neutral-900 "}>
+        <div id={"about"} className={"flex flex-col min-h-screen items-center justify-center gap-4 bg-neutral-900 "}>
         <div className={"flex flex-col items-center  p-5 rounded-xl mt-10"}>
           <p className="font-bold text-5xl pb-2">Om oss</p>
           <p className="font-bold text-3xl text-center max-w-[600px]">Vi är experter på allting</p>
