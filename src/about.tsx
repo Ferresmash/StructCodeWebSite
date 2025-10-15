@@ -1,7 +1,7 @@
 import axelicon from './assets/axelicon.png';
 import ferreicon from './assets/ferreicon.jpg';
 import pontusicon from './assets/pontusicon.png';
-import williamicon from './assets/William.jpg';
+import williamicon from './assets/williamicon.png';
 
    
    export function About() {
