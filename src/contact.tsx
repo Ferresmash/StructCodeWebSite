@@ -4,7 +4,7 @@
 export function Contact() {
 
     return (
-        <div className={"flex flex-col items-center justify-center gap-4 size-full bg-neutral-950"}>
+        <div id={"contact"} className={"flex flex-col items-center justify-center gap-4 size-full bg-neutral-950"}>
             <div className={"max-w-[800px] w-full flex flex-col sm:flex-row gap-4 p-4 rounded-xl"}>
                 <div className="grow flex flex-col gap-2">
                     <h1>Kontaktinfo</h1>
