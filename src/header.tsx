@@ -19,7 +19,7 @@ export function Header() {
     }
 
     return (
-        <header className={`w-full px-4 py-2 flex justify-center fixed top-0 z-10 transition-colors duration-300
+        <header className={`w-full px-4 py-2 flex max-w-screen justify-center fixed top-0 z-10 transition-colors duration-300
         ${scrolled ? "bg-black/50 backdrop-blur-md shadow-md" : "bg-transparent" }`}>
             <div className={"max-w-[800px] w-full flex flex-row justify-between items-center"}>
                 <p className="text-3xl font-bold">STRUKTURɅ</p>
