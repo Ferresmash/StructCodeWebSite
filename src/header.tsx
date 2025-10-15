@@ -15,7 +15,7 @@ export function Header() {
         <header className={`w-full px-4 py-2 flex justify-center fixed top-0 z-10 transition-colors duration-300
         ${scrolled ? "bg-black/50 backdrop-blur-md shadow-md" : "bg-transparent" }`}>
             <div className={"max-w-[800px] w-full flex flex-row justify-between items-center"}>
-                <p className="text-3xl font-bold">Silas AB</p>
+                <p className="text-3xl font-bold">STRUKTURɅ</p>
                 <nav className={"p-2"}>   
                     <a href="#home" class="text-white hover:underline mx-2 ">Home</a>
                     <a href="#about" className="text-white hover:underline mx-2">About</a>
