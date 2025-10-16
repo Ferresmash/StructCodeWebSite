@@ -12,6 +12,7 @@
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@tailwindcss/vite": "^4.1.14",
+    "emailjs-com": "^3.2.0",
     "preact": "^10.27.2",
     "preact-iso": "^2.11.0",
     "preact-router": "^4.1.2",
