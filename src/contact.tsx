@@ -1,7 +1,35 @@
-
+import { useRef } from "preact/hooks";
+import { h } from "preact";
+import emailjs from "emailjs-com";
+import type React from "preact/compat";
 
    
 export function Contact() {
+    const form = useRef<HTMLFormElement>(null);
+
+    const sendEmail = (e: Event) => {
+        e.preventDefault();
+
+        if (!form.current) return;
+
+        emailjs
+        .sendForm(
+            "service_1vnm2cc",   // from EmailJS dashboard
+            "template_ifqz3yc",  // from EmailJS dashboard
+            form.current,
+            "Hd9Sy71i1BIK1WXmC"    // from EmailJS dashboard
+        )
+        .then(
+            (result) => {
+            console.log("✅ Email sent:", result.text);
+            alert("Message sent successfully!");
+            },
+            (error) => {
+            console.error("❌ Error:", error.text);
+            alert("Failed to send message. Please try again.");
+            }
+        );
+    };
 
     return (
         <div id={"contact"} className={"flex flex-col items-center justify-center gap-4 size-full bg-neutral-950"}>
@@ -12,13 +40,13 @@ export function Contact() {
                     <p className="text-lg">Email: Email@gmail.com</p>
                     <p className="text-lg">Telefon: 070-123 45 67</p>
                 </div>
-                <div className="grow flex flex-col items-end gap-4">
+                <form ref={form} onSubmit={sendEmail} className="grow flex flex-col items-end gap-4">
                     <p className="w-full text-center text-lg">Kontakta oss</p>
                     <input type="text" placeholder="Namn" className="w-full p-2 rounded text-white bg-neutral-900 focus:outline-1 focus:outline-neutral-700"/>
-                    <input type="text" placeholder="Email" className="w-full p-2 rounded text-white bg-neutral-900 focus:outline-1 focus:outline-neutral-700"/>
+                    <input type="email" placeholder="Email" className="w-full p-2 rounded text-white bg-neutral-900 focus:outline-1 focus:outline-neutral-700"/>
                     <textarea placeholder="Meddelande" className="w-full min-h-[100px] p-2 rounded mb-2 text-white bg-neutral-900 focus:outline-1 focus:outline-neutral-700"/>
-                    <button className="w-32 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Skicka</button>
-                </div>
+                    <button type="submit" className="w-32 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Skicka</button>
+                </form>
             </div>
         </div>
     )
