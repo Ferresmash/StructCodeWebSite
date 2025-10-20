@@ -1,7 +1,6 @@
 import { useRef } from "preact/hooks";
-import { h } from "preact";
+import { EmailIcon, PhoneIcon } from "../src/svgs.jsx";
 import emailjs from "emailjs-com";
-import type React from "preact/compat";
 
    
 export function Contact() {
@@ -34,13 +33,13 @@ export function Contact() {
     return (
         <div id={"contact"} className={"flex flex-col items-center justify-center gap-4 size-full bg-neutral-950"}>
             <div className={"max-w-[900px] w-full flex flex-col sm:flex-row gap-4 p-4 rounded-xl"}>
-                <div className="w-[50%] flex flex-col gap-2">
+                <div className="sm:w-[50%] flex flex-col gap-2">
                     <h1>Kontaktinfo</h1>
                     <p className="text-lg text-nowrap">Struktura Solutions AB</p>
-                    <p className="text-lg text-nowrap">solutionsstruktura@gmail.com</p>
-                    <p className="text-lg text-nowrap">070-123 45 67</p>
+                    <div className="flex gap-2"><EmailIcon width="24"/><p className="text-lg text-nowrap">solutionsstruktura@gmail.com</p></div>
+                   <div className="flex gap-2"><PhoneIcon width="24"/><p className="text-lg text-nowrap">070 123 45 67</p></div>
                 </div>
-                <form ref={form} onSubmit={sendEmail} className="w-[50%] flex flex-col items-end gap-4">
+                <form ref={form} onSubmit={sendEmail} className="sm:w-[50%] flex flex-col items-end gap-4">
                     <input type="text" name="name" placeholder="Namn" className="w-full p-2 rounded text-white bg-neutral-900 focus:outline-1 focus:outline-neutral-700"/>
                     <input type="email" name="email" placeholder="Email" className="w-full p-2 rounded text-white bg-neutral-900 focus:outline-1 focus:outline-neutral-700"/>
                     <textarea name="message" placeholder="Meddelande" className="w-full min-h-[100px] p-2 rounded mb-2 text-white bg-neutral-900 focus:outline-1 focus:outline-neutral-700"/>
