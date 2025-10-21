@@ -42,7 +42,7 @@ export function Contact() {
     }, []);
 
     return (
-        <div id={"contact"} className={"flex flex-col items-center justify-center gap-4 size-full bg-neutral-950"}>
+        <div id={"contact"} className={"min-h-screen flex flex-col items-center justify-center gap-4 size-full bg-neutral-950"}>
             <div className={"max-w-[900px] w-full flex flex-col sm:flex-row gap-4 p-4 rounded-xl"}>
                 <div className="sm:w-[50%] flex flex-col gap-2">
                     <h1>Kontaktinfo</h1>

@@ -24,9 +24,9 @@ export function Header() {
             <div className={"max-w-[1000px] w-full flex flex-row justify-between items-center"}>
                 <p className="text-3xl font-bold">STRUKTURɅ</p>
                 <nav className={"p-2"}>   
-                    <button onClick={() => scrollToSection("home")} class="text-white hover:underline mx-2 cursor-pointer">Home</button>
-                    <button onClick={() => scrollToSection("about")} className="text-white hover:underline mx-2 cursor-pointer">About</button>
-                    <button onClick={() => scrollToSection("contact")} className="text-white hover:underline mx-2 cursor-pointer">Contact</button>
+                    <button onClick={() => scrollToSection("home")} class="text-white hover:underline mx-2 cursor-pointer">Hem</button>
+                    <button onClick={() => scrollToSection("about")} className="text-white hover:underline mx-2 cursor-pointer">Om oss</button>
+                    <button onClick={() => scrollToSection("contact")} className="text-white hover:underline mx-2 cursor-pointer">Kontakta</button>
                 </nav>
             </div>
             
