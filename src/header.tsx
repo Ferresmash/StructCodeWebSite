@@ -21,7 +21,7 @@ export function Header() {
     return (
         <header className={`w-full px-4 py-2 flex max-w-screen justify-center fixed top-0 z-10 transition-colors duration-300
         ${scrolled ? "bg-black/50 backdrop-blur-md shadow-md" : "bg-transparent" }`}>
-            <div className={"max-w-[800px] w-full flex flex-row justify-between items-center"}>
+            <div className={"max-w-[1000px] w-full flex flex-row justify-between items-center"}>
                 <p className="text-3xl font-bold">STRUKTURɅ</p>
                 <nav className={"p-2"}>   
                     <button onClick={() => scrollToSection("home")} class="text-white hover:underline mx-2 cursor-pointer">Home</button>
