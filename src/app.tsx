@@ -7,7 +7,7 @@ import { Home } from './home.tsx'
 
 export function App() {
   return (
-    <div className={`w-screen h-screen bg-[url(/image.jpg)] bg-center bg-cover`}>
+    <div className={`w-screen h-screen  bg-center`}>
       <Header/>
       <Home/>
       <About/>
