@@ -28,6 +28,7 @@
   border-radius: 1100px;
   border-color: white;
   border-width: 1px;
+  text-wrap: nowrap;
 }
 
 .landingPageBtn:hover {

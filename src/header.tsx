@@ -24,7 +24,7 @@ export function Header() {
         ${scrolled ? "bg-black/50 backdrop-blur-md shadow-md" : "bg-transparent" }`}>
             <div className={"max-w-[1000px] w-full flex flex-row gap-2 justify-start items-center"}>
                 <img src={logo} alt="Logo" className="w-8 h-8"/>
-                <p className="text-3xl font-bold">STRUKTURɅ</p>
+                <p className="text-3xl font-bold hidden xs:block">STRUKTURɅ</p>
                 <nav className={"p-2 ml-auto"}>   
                     <button onClick={() => scrollToSection("home")} class="text-white hover:underline mx-2 cursor-pointer">Hem</button>
                     <button onClick={() => scrollToSection("about")} className="text-white hover:underline mx-2 cursor-pointer">Om oss</button>
